@@ -1,3 +1,7 @@
-import Stopwatch from './StopwatchWithResults.js'
+const input = document.querySelector('.search-1') as HTMLFormElement;
+const btn = document.querySelector('.btn-1');
 
-new Stopwatch(document.querySelector('.stopwatch'))
+btn!.addEventListener('click', () => {
+    input.classList.toggle('active');
+})
+

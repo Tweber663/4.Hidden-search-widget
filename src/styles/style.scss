@@ -1,66 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500;800&display=swap');
-$fontColor: #fff;
-
 body {
-  font-family: Mukta;
-  background-color: #32336c;
-  background-image: linear-gradient(16deg, #32336c 26%, #5755b7 100%);
-  margin: 0;
-  color: $fontColor;
-  height: 100vh;
+    box-sizing: border-box; 
+    background-color: rgb(97, 61, 204);
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    margin: 0;
+    height: 100vh;
 }
 
-.stopwatch {
-  margin: 0 auto;
-  max-width: 40rem;
-  height: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.container {
+    border: 1px dotted white;
+}
 
-  &__current-time {
-    font-size: 8rem;
-    margin: 2rem 0;
-    font-weight: 500;
-    letter-spacing: 1rem;
-  }
+//Search-1
 
-  &__button {
-    background-color: #ff4747;
-    background-image: linear-gradient(62deg, #ff4747 0%, #bc3e7f 100%);
-    border-radius: 1rem;
-    padding: 0.5rem 2rem;
-    border: none;
-    color: inherit;
-    font: inherit;
-    margin: 1rem;
-    text-shadow: 0 0;
-    box-shadow: 0 20px 40px 0 rgba(76,104,239,.15);
-    transition: .2s;
-    cursor: pointer;
+.search-1 {
     position: relative;
-    top: 0;
-    left: 0;
-    outline: none;
-    &:hover {
-      position: relative;
-      top: -0.2rem;
-      left: -0.2rem;
-      box-shadow: 0 10px 40px 0 rgba(76,104,239,.25);
-    }
-  }
-
-  &__results ul {
-    list-style-type: none;
-    margin: 2rem;
-    padding: 0;
-
-    li {
-      padding: 1rem;
-      border-bottom: 1px dashed rgba(105, 127, 238, 0.25);
-    }
-  }
-  
+    margin: 0;
 }
+
+.input-1 {
+    border-radius: 5px;
+    background-color: white;
+    border: none;
+    font-size: 18px;
+    padding: 15px;
+    height: 25px;
+    width: 25px;
+    transition: width 500ms ease;
+}
+.btn-1 {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    transition: transform 500ms ease;
+}
+
+.search-1.active .input-1 {
+    width: 220px;
+}
+
+.search-1.active .btn-1 {
+    transform: translateX(100px) translate(-50%, -50%); 
+}
+
+//Search-2 
